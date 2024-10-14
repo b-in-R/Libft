@@ -42,8 +42,14 @@ en cours strnstr
 14.10
 
 strnstr modifie: 
+	ft_strnstr.c:30:84: error: comparison of unsigned expression in ‘>= 0’ is always true [-Werror=type-limits]
+	30 |           if (little[j] == '\0' || (little[j + 1] == '\0' && len - 1 >= 0))
 
-ft_strnstr.c:30:84: error: comparison of unsigned expression in ‘>= 0’ is always true [-Werror=type-limits]
-   30 |           if (little[j] == '\0' || (little[j + 1] == '\0' && len - 1 >= 0))
+	voir fonctionnement 
 
-voir fonctionnement + francinette tout
+substr:
+	voir sur mac 
+	AddressSanitizer:DEADLYSIGNAL
+	[1]    1254807 segmentation fault (core dumped)  ./a.out
+
+francinette tout
