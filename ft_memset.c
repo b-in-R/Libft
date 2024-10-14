@@ -6,7 +6,7 @@
 /*   By: rabiner <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:34:12 by rabiner           #+#    #+#             */
-/*   Updated: 2024/10/02 16:14:58 by rabiner          ###   ########.fr       */
+/*   Updated: 2024/10/14 18:14:21 by rabiner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
-	unsigned char	*res;
+	char	*res;
 
-	res = (unsigned char *) b;
+	res = (char *) b;
 	i = 0;
 	while (i < len)
 	{

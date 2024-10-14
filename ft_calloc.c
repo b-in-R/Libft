@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 	res = ft_memset(res, 0, count * size);
 	return (res);
 }
-
+/*
 int	main(void)
 {
 //	int	*src1;
@@ -58,4 +58,4 @@ int	main(void)
 	return 0;
 }
 //cc -Wall -Wextra -Werror -fsanitize=address ft_calloc.c
-
+*/
