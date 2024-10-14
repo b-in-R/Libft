@@ -15,43 +15,47 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;
-	size_t	i;
 
-	i = 0;
-	res = malloc(size * count);
+	res = malloc(count * size);
 	if (!res)
-		return (0);
-	while (i < count)
-	{
-		((int *)res)[i] = 0;
-		i++;
-	}
-	((int *)res)[count] = 0;
+		return (NULL);
+	ft_memset(res, '\0', count * size);
 	return (res);
 }
-
+/*
 int	main(void)
 {
-	char	*src1;
-	char	*src2;
+	int	*src1;
+	int	*src2;
 	size_t	count = 12;
 	size_t	size = sizeof(int);
 	size_t	i = 0;
 
 	src1 = calloc(count, size);
 	src2 = ft_calloc(count, size);
+	if (!src2 || !src1)
+	{
+		printf("erreur allocation");
+		return 1;
+	}
 	printf("v:\n");
-//	while (i < count)
-//		printf("%i", src1[i++]);
-//	printf("\n");
+	while (i < count)
+	{
+		printf("%d, ", src1[i]);
+		i++;
+	}
+	printf("\n");
 	i = 0;
 	printf("t:\n");
-	//while (i < count)
-	//	printf("%i", src2[i++]);
-	//printf("\n\n");
-//	free(src1);
-//	free(src2);
+	while (i < count)
+	{
+		printf("%d, ", src2[i]);
+		i++;
+	}
+	printf("\n");
+	free(src1);
+	free(src2);
 	return 0;
 }
-
+*/
 //cc -Wall -Wextra -Werror -fsanitize=address ft_calloc.c
