@@ -6,7 +6,7 @@
 #    By: rabiner <rabiner@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:56:11 by rabiner           #+#    #+#              #
-#    Updated: 2024/10/13 18:31:06 by rabiner          ###   ########.fr        #
+#    Updated: 2024/10/15 19:31:22 by rabiner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS = ft_bzero.c \
 	ft_strchr.c \
 	ft_atoi.c \
 	ft_calloc.c \
-	ft_substr.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c \
 
 OBJS = $(SRCS:.c=.o)
 
