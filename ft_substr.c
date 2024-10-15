@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	l = ft_strlen(s);
 	printf("strlen: %lu\n", l);
-	if (start + len > l)
+	if (start + len > l)//jusqua '\0' --> voir si start > l(s) renvoi pointeur (valeur null)
 		return (0);
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
