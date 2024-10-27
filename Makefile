@@ -22,11 +22,19 @@ SRCS = ft_bzero.c \
 	ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strnstr.c \
 	ft_toupper.c ft_tolower.c \
 	ft_strchr.c \
-	ft_atoi.c \
+	ft_atoi.c ft_itoa.c \
 	ft_calloc.c \
-	ft_substr.c ft_strjoin.c ft_strtrim.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
+	ft_strmapi.c ft_striteri.c \
+	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+
+BONUS = ft_lstnew.c \
+
+SRCSALL = ${SRCS} ${BONUS}
 
 OBJS = $(SRCS:.c=.o)
+
+OBJSALL = $(SRCSALL:.c=.o)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -36,12 +44,15 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: ${OBJSALL}
+	ar rcs $(NAME) $(OBJSALL)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJSALL)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

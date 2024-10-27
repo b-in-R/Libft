@@ -53,3 +53,24 @@ substr:
 	[1]    1254807 segmentation fault (core dumped)  ./a.out
 
 francinette tout
+
+26.10
+
+➜  Libft git:(master) ✗ git commit -m "fini jusquaux bonus, makefile a verifier, readme a mettre a jour, libft bonus non inclus"
+[master 0ce5d5b] fini jusquaux bonus, makefile a verifier, readme a mettre a jour, libft bonus non inclus
+ 12 files changed, 394 insertions(+), 54 deletions(-)
+ create mode 100644 ft_itoa.c
+ create mode 100644 ft_putchar_fd.c
+ create mode 100644 ft_putendl_fd.c
+ create mode 100644 ft_putnbr_fd.c
+ create mode 100644 ft_putstr_fd.c
+ create mode 100644 ft_split.c
+ create mode 100644 ft_striteri.c
+ create mode 100644 ft_strmapi.c
+➜  Libft git:(master) git push
+ERROR: Permission to b-in-R/Libft.git denied to deploy key
+fatal: Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+

@@ -44,20 +44,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 int	main(int ac, char **av)
 {
 	char	base[] = "1234567890";
-	void	*src = (void *)base;
-	void	*dst = (void *)(base + 3);
+	char	*src = base;
+	char	*dst = (base + 3);
 //	char	dst[] = "qwertyuiopasdf";
-	size_t	len = 0;
+	size_t	len = 7;
 
 	(void)av;
 
 	printf("src base: %s\nDST base: %s\nlen: %zu\n", src, dst, len);
 
 	if (ac == 2)
-		printf("vrai: %s\n", memmove(dst , src, len));
+		printf("vrai: %s\n", (char *)memmove(dst , src, len));
 	else
 	{
-		printf("test: %s\n", ft_memmove(((void*)0), src, len));
+		printf("test: %s\n", (char *)ft_memmove(dst, src, len));
 		return 0;
 	}
 

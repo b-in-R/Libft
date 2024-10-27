@@ -15,56 +15,25 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
-	size_t	j;
-	size_t	r;
-	size_t	len_s1;
-	size_t	len_set;
-	char	*res;
+	size_t	len;
 
-	i = 0;
-	j = 0;
-	len_s1 = ft_strlen(s1);
-	len_set = ft_strlen(set);
-	res = malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (!res)
+	if (!s1)
 		return (NULL);
-	while (j < ft_strlen(set) && i < len_set)
-	{
-		if (s1[i] == set[j])
-		{
-			i++;
-			j = 0;
-		}
-		else
-			j++;
-	}
-	j = 0;
-	r = 0;
-	while (s1[i])
-	{
-		if (i >= len_s1 - len_set && s1[i] == set[j])
-		{
-			i++;
-			j = 0;
-		}
-		else if (i >= len_s1 - len_set && set[j] != '\0')
-			j++;
-		else
-		{
-			res[r] = s1[i];
-			j = 0;
-			r++;
-			i++;
-		}
-	}
-	res[r] = '\0';
-	return (res);
+	if (!set || set[0] == '\0')
+		return (ft_substr(s1, 0, ft_strlen(s1)));
+	i = 0;
+	len = ft_strlen(s1);
+	while (s1[i] && ft_strchr(set, s1[i]) != NULL)
+		i++;
+	while (len > i && ft_strchr(set, s1[len - 1]) != NULL)
+		len--;
+	return (ft_substr(s1, i, len - i));
 }
-
+/*
 int	main(void)
 {
-	const char	s1[] = " qqqwery.salut qwery.qwerT ";
-	const char	set[] = "yrewq ";
+	const char	s1[] = "tresalutywqer. aqyw";
+	const char	set[] = "qwerty";
 	char		*res;
 
 	res = ft_strtrim(s1, set);
@@ -72,3 +41,4 @@ int	main(void)
 	free(res);
 	return 0;
 }
+*/
