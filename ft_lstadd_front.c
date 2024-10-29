@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabiner <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:24:10 by rabiner           #+#    #+#             */
+/*   Updated: 2024/10/28 15:24:14 by rabiner          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -9,40 +20,33 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 /*
-//test
-#include <stdio.h>
-
 int	main(int ac, char **av)
 {
-	int		A;
-	int		B;
-	t_list	*instanceA;
-	t_list	*instanceB;
+	int		a;
+	int		b;
+	t_list	*node_a;
+	t_list	*node_b;
 
 	if (ac == 3)
 	{
-		A = atoi(av[1]);
-		B = atoi(av[2]);
-		instanceA = ft_lstnew(&A);
-		instanceB = ft_lstnew(&B);
-		printf("======== list before nodes are added to it ========\n");
-		printf("instanceA->content :%d\n", *(int *)instanceA->content);
-		printf("instanceA->next    :%p\n", (void *)instanceA->next);
-		printf("instanceB->content :%d\n", *(int *)instanceB->content);
-		printf("instanceB->next    :%p\n", (void *)instanceB->next);
+		a = atoi(av[1]);
+		b = atoi(av[2]);
+		node_a = ft_lstnew(&a);
+		node_b = ft_lstnew(&b);
+		printf("======== list before ========\n");
+		printf("node_a->content :%d\n", *(int *)node_a->content);
+		printf("node_b->content :%d\n", *(int *)node_b->content);
 
-		ft_lstadd_front(&instanceA, instanceB);
-		printf("======== list after nodes are added to it  ========\n");
-		printf("instanceA->content :%d\n", *(int *)instanceA->content);
-		printf("instanceA->next    :%p\n", (void *)instanceA->next);
-		printf("instanceA->next->content :%d\n", *(int *)instanceA->next->content);
-		printf("instanceA->next->next    :%p\n", (void *)instanceA->next->next);
-		printf("instanceB->content    :%d\n", *(int *)instanceB->content);
+		ft_lstadd_front(&node_a, node_b);
+		printf("======== list after ========\n");
+		printf("node_a->content :%d\n", *(int *)node_a->content);
+		printf("node_b->content    :%d\n", *(int *)node_b->content);
 	}
 	else
 	{
-		printf("enter two numbers as args to be tested (with atoi)");
+		printf("2 arg num");
 		return (-1);
 	}
 	return(0);
-}*/
+}
+*/

@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rabiner <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 15:26:13 by rabiner           #+#    #+#             */
-/*   Updated: 2024/10/28 15:26:15 by rabiner          ###   ########.fr       */
+/*   Created: 2024/10/28 16:02:48 by rabiner           #+#    #+#             */
+/*   Updated: 2024/10/28 16:02:49 by rabiner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((const unsigned char *)s)[i] == (unsigned char)c)
+			return ((void *)((char *)s + i));
+		i++;
+	}
+	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	s[] = "test avec backslashN";
-	ft_putendl_fd(s, 1);
+	const char	s[] = "1234567890";
+	char		c = '5';
+	size_t		n = 4;
+
+	printf("vrai: %s\n", (char *)memchr(s, c, n));
+	printf("test: %s\n", (char *)ft_memchr(s, c, n));
 	return 0;
 }
 */

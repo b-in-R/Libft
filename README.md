@@ -31,28 +31,36 @@ ft_memmove      : [OK] [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK]
 
 6.10
 
-enlevé restrict de strlcy memcpy 
+	enlevé restrict de strlcy memcpy 
 
-main de test dans strlcpy
+	main de test dans strlcpy
 
 9.10
 
-en cours strnstr
+	en cours strnstr
 
 14.10
 
-strnstr modifie: 
+	strnstr modifie: 
 	ft_strnstr.c:30:84: error: comparison of unsigned expression in ‘>= 0’ is always true [-Werror=type-limits]
 	30 |           if (little[j] == '\0' || (little[j + 1] == '\0' && len - 1 >= 0))
 
 	voir fonctionnement 
 
-substr:
+	substr:
 	voir sur mac 
 	AddressSanitizer:DEADLYSIGNAL
 	[1]    1254807 segmentation fault (core dumped)  ./a.out
 
-francinette tout
+	francinette tout
 
 26.10
-push jusquau bonus
+	push jusquau bonus
+
+28.10
+
+	nbre d'ex: base 23	suppl 11	bonus 9		tot 43
+
+	manque:  strncmp ok, memchr ok, memcmp ok, strdup ok
+
+	PACO: err strrchr, strncmp

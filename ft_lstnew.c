@@ -1,42 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabiner <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:25:26 by rabiner           #+#    #+#             */
+/*   Updated: 2024/10/28 15:25:29 by rabiner          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*instance;
+	t_list	*node;
 
-	instance = malloc(sizeof(t_list));
-	if (!instance)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	instance->content = content;
-	instance->next = NULL;
-	return (instance);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
 /*
-//test
-#include <stdio.h>
-#include <stdlib.h>
-
 int	main(int ac, char **av)
 {
 	int		a;
 	int		b;
-	t_list	*instance_a;
-	t_list	*instance_b;
+	t_list	*node_a;
+	t_list	*node_b;
 
 	if (ac == 3)
 	{
 		a = atoi(av[1]);
 		b = atoi(av[2]);
-		instance_a = ft_lstnew(&a);
-		printf("instance_a->content = %d\n", *(int *)instance_a->content);
-		instance_b = ft_lstnew(&b);
-		printf("instance_b->content = %d\n", *(int *)instance_b->content);
-		printf("next instance = %p\n", (void *)instance_b->next);
+		node_a = ft_lstnew(&a);
+		printf("node_a->content = %d\n", *(int *)node_a->content);
+		node_b = ft_lstnew(&b);
+		printf("node_b->content = %d\n", *(int *)node_b->content);
 	}
 	else
 	{
-		printf("enter two numbers as args to be tested (with atoi)");
+		printf("2 arg numeral (atoi)");
 		return (-1);
 	}
 	return(0);
