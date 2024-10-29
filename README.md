@@ -59,7 +59,7 @@ ft_memmove      : [OK] [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK]
 
 28.10
 
-	nbre d'ex: base 23	suppl 11	bonus 9		tot 43
+	nbre d'ex: base 23	suppl 11 (34)	bonus 9		tot 43
 
 	manque:  strncmp ok, memchr ok, memcmp ok, strdup ok
 
