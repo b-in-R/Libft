@@ -13,11 +13,15 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
+//# include <stdio.h>
 # include <string.h>
 # include <unistd.h>
 # include <ctype.h>
 # include <stdlib.h>
+# include <stdarg.h>
+
+# define SYMB_MIN "0123456789abcdef"
+# define SYMB_MAX "0123456789ABCDEF"
 
 typedef struct s_list
 {
@@ -59,6 +63,15 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+int		ft_printf(const char *format, ...);
+int		check_format(char format, va_list ap);
+int		check_uint(char format, va_list ap);
+int		check_ptr(char format, va_list ap);
+int		ft_putnbr(long nbr, char format);
+int		ft_puthex(unsigned long nbr, char format);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
