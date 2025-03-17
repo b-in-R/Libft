@@ -1,19 +1,26 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphael <raphael@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rabiner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 15:27:29 by rabiner           #+#    #+#             */
-/*   Updated: 2025/02/24 14:16:02 by raphael          ###   ########.fr       */
+/*   Created: 2025/03/17 17:24:57 by rabiner           #+#    #+#             */
+/*   Updated: 2025/03/17 17:25:11 by rabiner          ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//# include <stdio.h>
+# ifdef __APPLE__
+#  define NULL_PTR_STR "0x0"
+#  define NULL_PTR_LEN 3
+# else
+#  define NULL_PTR_STR "(nil)"
+#  define NULL_PTR_LEN 5
+# endif
+
 # include <string.h>
 # include <unistd.h>
 # include <ctype.h>
