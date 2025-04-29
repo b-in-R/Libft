@@ -24,7 +24,7 @@ SRCS = ft_bzero.c \
 	ft_strchr.c ft_strrchr.c ft_strdup.c \
 	ft_atoi.c ft_itoa.c \
 	ft_calloc.c \
-	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_split_free.c \
 	ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_printf.c ft_printf_write.c ft_printf_nbrs.c \
