@@ -6,7 +6,7 @@
 #    By: rabiner <rabiner@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:56:11 by rabiner           #+#    #+#              #
-#    Updated: 2024/10/15 19:31:22 by rabiner          ###   ########.fr        #
+#    Updated: 2025/04/28 22:10:33 by rabiner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS = ft_bzero.c \
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 		ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+		get_next_line.c
 
 SRCSALL = ${SRCS} ${BONUS}
 

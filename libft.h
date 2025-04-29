@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rabiner <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rabiner <rabiner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:24:57 by rabiner           #+#    #+#             */
-/*   Updated: 2025/03/17 17:25:11 by rabiner          ###   ########.fr       */
+/*   Updated: 2025/04/28 22:10:10 by rabiner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include <ctype.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 # define SYMB_MIN "0123456789abcdef"
 # define SYMB_MAX "0123456789ABCDEF"
@@ -89,5 +90,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+char	*get_next_line(int fd);
 
 #endif
