@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rabiner <rabiner@student.42.fr>            +#+  +:+       +#+         #
+#    By: binr <binr@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:56:11 by rabiner           #+#    #+#              #
-#    Updated: 2025/04/28 22:10:33 by rabiner          ###   ########.fr        #
+#    Updated: 2025/05/02 23:22:11 by binr             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS = ft_bzero.c \
 	ft_strchr.c ft_strrchr.c ft_strdup.c \
 	ft_atoi.c ft_itoa.c \
 	ft_calloc.c \
-	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_split_free.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c \
+	ft_split.c ft_split_free.c ft_split_quote.c \
 	ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_printf.c ft_printf_write.c ft_printf_nbrs.c \
