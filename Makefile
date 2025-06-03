@@ -6,7 +6,7 @@
 #    By: rabiner <rabiner@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:56:11 by rabiner           #+#    #+#              #
-#    Updated: 2025/06/03 17:18:05 by rabiner          ###   ########.fr        #
+#    Updated: 2025/06/03 21:14:58 by rabiner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 
 CC = cc
 RM = rm -f
+RMDIR = rm -rf
 CFLAGS = -Wall -Wextra -Werror -I.
 
 SRCS = ft_bzero.c \
@@ -30,35 +31,33 @@ SRCS = ft_bzero.c \
 	ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_printf.c ft_printf_write.c ft_printf_nbrs.c \
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+	ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+	ft_get_next_line.c
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-		ft_lstclear.c ft_lstiter.c ft_lstmap.c \
-		get_next_line.c
 
-SRCSALL = ${SRCS} ${BONUS}
+OBJS_DIR =  objs
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-OBJS = $(SRCS:.c=.o)
+$(OBJS_DIR):
+	@mkdir -p $(OBJS_DIR)
 
-OBJSALL = $(SRCSALL:.c=.o)
-
-%.o: %.c libft.h
+$(OBJS_DIR)/%.o: %.c libft.h | $(OBJS_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
-
+	
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: ${OBJSALL}
-	ar rcs $(NAME) $(OBJSALL)
-
 clean:
-	$(RM) $(OBJSALL)
-
+	$(RM) $(OBJS)
+	
 fclean: clean
 	$(RM) $(NAME)
-
+	$(RMDIR) $(OBJS_DIR)
+	
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

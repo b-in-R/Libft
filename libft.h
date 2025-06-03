@@ -6,7 +6,7 @@
 /*   By: rabiner <rabiner@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 17:24:57 by rabiner           #+#    #+#             */
-/*   Updated: 2025/06/03 17:16:57 by rabiner          ###   ########.fr       */
+/*   Updated: 2025/06/03 20:52:48 by rabiner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 
 # define SYMB_MIN "0123456789abcdef"
 # define SYMB_MAX "0123456789ABCDEF"
+# define BUFFER_SIZE 10
 
 typedef struct s_list
 {
